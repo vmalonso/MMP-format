@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Measure Map & Measure Map Pro XML format</title>
+        
+        <meta name="keywords" content="XML, KML, GPS, MMP, format, GIS">
+        <meta name="description" content="GPS format to store polygons and routes used by Measure Map App.">
+        <meta name="author" content="Victor Alonso. Global DPI, Llc">
+        
+<script language="javascript">$(function() { dp.SyntaxHighlighter.HighlightAll('code'); });</script><link rel="stylesheet" type="text/css" href="mktree.css">
+<script type="text/javascript" src="mktree.js"></script>
+</head>
+<body>
+
+<p>
+    <h3> Measure Map XML format: .MMP files</h3>
+    [<a href="#" class="button" onClick="expandTree('tree1');return false;">Expand All Nodes</a>], [<A class="button" href="#" onClick="collapseTree('tree1'); return false;">Collapse All Nodes</A>]</p>
+    <hr>
+
+<ul class="mktree" id="tree1">
+	<li class="liBullet"> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+	</li>
+	<li class="liOpen">&lt;POLYGONS&gt;
+		<ul>
+            <li class="liOpen">&lt;POLYGON&gt;
+                <ul>
+                    <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
+                    <li>&lt;DESCRIPTION&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/DESCRIPTION&gt; </li>
+                    <li>&lt;ISHOLE&lt; <span class="data">0/1 </span>&lt;/ISHOLE&gt; </font>
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: The polygon is considered as an inner polygon. (Default) </span></LI>
+                            <LI class="liBullet"> <span class="text">1: The Polygon is considered as a hole.</span></LI>
+                            
+                        </UL>
+                    </li>
+                    <li>&lt;BLOCKED&gt; <span class="data">0/1</span>&lt;/BLOCKED&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: The polygon is unlocked and can be edited. </span></LI>
+                            <LI class="liBullet"> <span class="text">1: The Polygon is locked and can not be edited. (Default) </span></LI>
+                        
+                        </UL>
+                    </li>
+                    <li>&lt;SHAPE&gt; <span class="data">0/1/2</span>&lt;/SHAPE&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: No shape. It's an ordinary polygon. (Default) </span></LI>
+                            <LI class="liBullet"> <span class="text">1: Circle.</span></LI>
+                            <LI class="liBullet"> <span class="text">2: Rectangle.</span></LI>
+                            
+                        </UL>
+                    </li>
+                    <li>&lt;NOSURFACE&gt; <span class="data">0/1</span>&lt;/NOSURFACE&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: Consider the area of the polygon. (Default) </span></LI>
+                            <LI class="liBullet"> <span class="text">1: Do not consider the area or surface, just the perimeter </span></LI>    
+                        </UL>
+                    </li>
+                    <li>&lt;SHOWPINS&gt; <span class="data">0/1</span>&lt;/SHOWPINS&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: Display a pin for every point. </span></LI>
+                            <LI class="liBullet"> <span class="text">1: Do not display pins. (Default)  </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;SHOWDISTANCES&gt; <span class="data">0/1</span>&lt;/SHOWDISTANCES&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">0: Do not display intermediate distances between consecutive points. </span></LI>
+                            <LI class="liBullet"> <span class="text">1: display intermediate distances between consecutive points. </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LINECOLOR&gt; <span class="data">0/1/2/3/4/5/6</span>&lt;/LINECOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">Basic color of the line. For a wider range of colors, use value 6 and use LINECUSTOMCOLOR element </span></LI>
+                            <LI class="liBullet"><span class="text"> 0: Red </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Blue </span></LI>
+                            <LI class="liBullet"><span class="text"> 2: Green </span></LI>
+                            <LI class="liBullet"><span class="text"> 3: Yellow </span></LI>
+                            <LI class="liBullet"><span class="text"> 4: White </span></LI>
+                            <LI class="liBullet"><span class="text"> 5: Black </span></LI>
+                            <LI class="liBullet"><span class="text"> 6: Custom Color. See next element </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LINECUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/LINECUSTOMCOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> Hexadecima value for the color of the line, where </span></LI>
+                            <LI class="liBullet"><span class="text"> XX: hex red value  </span></LI>
+                            <LI class="liBullet"><span class="text"> YY: hex green value  </span></LI>
+                            <LI class="liBullet"><span class="text"> ZZ: hex blue value  </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LINEWIDTH&gt; <span class="data">1..10</span>&lt;/LINEWIDTH&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">Line width (range from 1 pixel to 10) </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;AREACOLOR&gt; <span class="data">0/1/2/3/4/5/6</span>&lt;/AREACOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> Basic color of the area. For a wider range of colors, use value 6 and use AREACUSTOMCOLOR element </LI>
+                            <LI class="liBullet"><span class="text"> 0: Red </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Blue </span></LI>
+                            <LI class="liBullet"><span class="text"> 2: Green </span></LI>
+                            <LI class="liBullet"><span class="text"> 3: Yellow </span></LI>
+                            <LI class="liBullet"><span class="text"> 4: White </span></LI>
+                            <LI class="liBullet"><span class="text"> 5: Black </span></LI>
+                            <LI class="liBullet"><span class="text"> 6: Custom Color. See next element </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;AREACUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/AREACUSTOMCOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> Hexadecima value for the color, where </span></LI>
+                            <LI class="liBullet"><span class="text"> XX: hex red value  </span></LI>
+                            <LI class="liBullet"><span class="text"> YY: hex green value  </span></LI>
+                            <LI class="liBullet"><span class="text"> ZZ: hex blue value  </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;AREATRANSPARENCY&gt; <span class="data">1..10</span>&lt;/AREATRANSPARENCY&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> Transparecency of the area: from 1 (less transparent) to 10 (most transparent) </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;SHOWAREAMEASURE&gt; <span class="data">0/1</span>&lt;/SHOWAREAMEASURE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> 0: Do not display a label with the measured area of the polygon. </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Display a label with the measured area of the polygon. (Default) </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;SHOWPERIMETERMEASURE&gt; <span class="data">0/1</span>&lt;/SHOWPERIMETERMEASURE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> 0: Do not display a label with the measured perimeter of the polygon. (Default)</span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Display a label with the measured perimeter of the polygon.  </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEPOLYGONLABELLONGITUDE&gt; <span class="data">float</span>&lt;/COORDINATEPOLYGONLABELLONGITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">The Longitude coordinate in WGS84 system where the label with the name of the polygon will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEPOLYGONLABELLATITUDE&gt; <span class="data">float</span>&lt;/COORDINATEPOLYGONLABELLATITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the name of the polygon will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEPERIMETERLABELLONGITUDE&gt; <span class="data">float</span>&lt;/COORDINATEPOLYGONLABELLONGITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Longitude coordinate in WGS84 system where the label of the perimeter will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEPERIMETERLABELLATITUDE&gt; <span class="data">float</span>&lt;/COORDINATEPERIMETERLABELLATITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label of the perimeter will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEAREALABELLONGITUDE&gt; <span class="data">float</span>&lt;/COORDINATEAREALABELLONGITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Longitude coordinate in WGS84 system where the label of the area will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;COORDINATEAREALABELLATITUDE&gt; <span class="data">float</span>&lt;/COORDINATEAREALABELLATITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label of the area will be displayed.</span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;PICTURES&gt;
+                        <UL>
+                            <li>&lt;PICTURE&gt;
+                                <UL>
+                                    <li>&lt;PICTUREURL&gt; <span class="data">URL</span>&lt;/PICTUREURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;PICTURETHUMBNAILURL&gt; <span class="data">URL</span>&lt;/PICTURETHUMBNAILURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture thumbnail. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                </UL>
+                            </li>
+                            <li>&lt;/PICTURE&gt;</li>
+                            <li>...</li>
+                            <li>&lt;PICTURE&gt;</li>
+                            <li>&lt;/PICTURE&gt;</li>
+                        </UL>
+                    </li>
+                    <li>&lt;/PICTURES&gt;</li>
+                    <li>&lt;POINTS&gt;
+                        <UL>
+                            <li>&lt;POINT&gt;
+                                <UL>
+                                    <li>&lt;LAT&gt; <span class="data">float</span>&lt;/LAT&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The Latitude coordinate of the point in WGS84 system.</span></LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;LONG&gt; <span class="data">float</span>&lt;/LONG&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The Longitude coordinate of the point in WGS84 system.</span></LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;ALT&gt; <span class="data">float</span>&lt;/ALT&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> Altitude of the point over the sea level in meters</span>.</LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;DESCPOINT&gt;
+                                        <UL>
+                                            <li>&lt;SHOWDESC&gt; <span class="data">0/1</span>&lt;/SHOWDESC&gt;
+                                                <UL>
+                                                    <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the map. (Default) </span></LI>
+                                                    <LI class="liBullet"><span class="text"> 1: Display the description of the point on the map.  </span></LI>
+                                                </UL>
+                                            </li>
+                                            <li>&lt;SHOWDESCINREPORT&gt; <span class="data">0/1</span>&lt;/SHOWDESCINREPORT&gt;
+                                                <UL>
+                                                    <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the report. (Default) </span></LI>
+                                                    <LI class="liBullet"><span class="text"> 1: Display the description of the point on the report.  </span></LI>
+                                                </UL>
+                                            </li>
+                                            <li>&lt;DESC&gt; <span class="data">XXXXXXXXXXXXXXX</span>&lt;/DESC&gt;
+                                                <UL>
+                                                    <LI class="liBullet"><span class="text"> The text description of the point. </span></LI>
+                                                </UL>
+                                            </li>
+                                            <li>&lt;DESCLAT&gt; <span class="data">float</span>&lt;/DESCLAT&gt;
+                                                <UL>
+                                                    <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                                </UL>
+                                            </li>
+                                            <li>&lt;DESCLONG&gt; <span class="data">float</span>&lt;/DESCLONG&gt;
+                                                <UL>
+                                                    <LI class="liBullet"><span class="text"> The Longitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                                </UL>
+                                            </li>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;/DESCPOINT&gt;</li>
+                                </UL>
+                            </li>
+                            <li>&lt;/POINT&gt;</li>
+                            <li>...</li>
+                            <li>&lt;POINT&gt;</li>
+                            <li>&lt;/POINT&gt;</li>
+                        </UL>
+                    </li>
+                    <li>&lt;/POINTS&gt;</li>
+                </ul>
+            </li>
+            <li class="liBullet">&lt;/POLYGON&gt;</li>
+            <li class="liBullet">...</li>
+            <li class="liBullet">&lt;POLYGON&gt; </li>
+            <li class="liBullet">&lt;/POLYGON&gt; </li>
+            <li>&lt;SPOT&gt;
+                <UL>
+                    <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
+                    <li>&lt;SHOWNAME&gt; <span class="data">0/1</span>&lt;/SHOWNAME&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> 0: Do not display the name of the spot on the map. (Default) </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Display the name of the spot on the map.  </span></LI>
+                        </UL>
+                    </li>
+	                <li>&lt;ICON&gt; <span class="data">integer</span>&lt;/ICON&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The index of the available icons. We start with 0.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;LAT&gt; <span class="data">float</span>&lt;/LAT&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The Latitude coordinate of the spot in WGS84 system.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;LONG&gt; <span class="data">float</span>&lt;/LONG&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The Longitude coordinate of the spot in WGS84 system.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;ALT&gt; <span class="data">float</span>&lt;/ALT&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> Altitude of the point over the sea level in meters</span>.</LI>
+                         </UL>
+                    </li>
+                    <li>&lt;DESCSPOT&gt;
+                         <UL>
+                             <li>&lt;SHOWDESC&gt; <span class="data">0/1</span>&lt;/SHOWDESC&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the map. (Default) </span></LI>
+                                      <LI class="liBullet"><span class="text"> 1: Display the description of the point on the map.  </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;SHOWDESCINREPORT&gt; <span class="data">0/1</span>&lt;/SHOWDESCINREPORT&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the report. (Default) </span></LI>
+                                      <LI class="liBullet"><span class="text"> 1: Display the description of the point on the report.  </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;DESC&gt; <span class="data">XXXXXXXXXXXXXXX</span>&lt;/DESC&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> The text description of the spot. </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;DESCLAT&gt; <span class="data">float</span>&lt;/DESCLAT&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                </UL>
+                             </li>
+                             <li>&lt;DESCLONG&gt; <span class="data">float</span>&lt;/DESCLONG&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The Longitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                </UL>
+                             </li>
+                        </UL>
+                     </li>
+                     <li>&lt;/DESCSPOT&gt;</li>
+                     <li>&lt;COORDINATESPOTLABELLONGITUDE&gt; <span class="data">float</span>&lt;/COORDINATESPOTLABELLONGITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">The Longitude coordinate in WGS84 system where the label with the name of the spot will be displayed.</span></LI>
+                        </UL>
+                     </li>
+                     <li>&lt;COORDINATESPOTLABELLATITUDE&gt; <span class="data">float</span>&lt;/COORDINATESPOTLABELLATITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the name of the spot will be displayed.</span></LI>
+                        </UL>
+                     </li>
+                     <li>&lt;PICTURES&gt;
+                        <UL>
+                            <li>&lt;PICTURE&gt;
+                                <UL>
+                                    <li>&lt;PICTUREURL&gt; <span class="data">URL</span>&lt;/PICTUREURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;PICTURETHUMBNAILURL&gt; <span class="data">URL</span>&lt;/PICTURETHUMBNAILURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture thumbnail. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                </UL>
+                            </li>
+                            <li>&lt;/PICTURE&gt;</li>
+                            <li>...</li>
+                            <li>&lt;PICTURE&gt;</li>
+                            <li>&lt;/PICTURE&gt;</li>
+                        </UL>
+                    </li>
+                    <li>&lt;/PICTURES&gt;</li>
+                  </UL>
+            </li>
+            <li>&lt;/SPOT&gt;</li>
+            <li>...</li>
+            <li>&lt;SPOT&gt;</li>
+            <li>&lt;/SPOT&gt;</li>
+            
+        </ul>
+        
+    </li>
+    
+    <li>&lt;/POLYGONS&gt;</li>
+</ul>
+
+    <hr>
+    Please contact me here <a href=mailto:victor@globaldpi.com>victor@globaldpi.com</a> if you have any question or suggestion.
+
+    
+    <h3><a href="http://measuremapapp.com"> Measure Map</a></h3>
+</body>
+</html>
