@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>Measure Map & Measure Map Pro XML format</title>
-        
+
         <meta name="keywords" content="XML, KML, GPS, MMP, format, GIS">
         <meta name="description" content="GPS format to store polygons and routes used by Measure Map App.">
         <meta name="author" content="Victor Alonso. Global DPI, Llc">
-        
+
 <script language="javascript">$(function() { dp.SyntaxHighlighter.HighlightAll('code'); });</script><link rel="stylesheet" type="text/css" href="mktree.css">
 <script type="text/javascript" src="mktree.js"></script>
 </head>
@@ -30,14 +30,14 @@
                         <UL>
                             <LI class="liBullet"> <span class="text">0: The polygon is considered as an inner polygon. (Default) </span></LI>
                             <LI class="liBullet"> <span class="text">1: The Polygon is considered as a hole.</span></LI>
-                            
+
                         </UL>
                     </li>
                     <li>&lt;BLOCKED&gt; <span class="data">0/1</span>&lt;/BLOCKED&gt;
                         <UL>
                             <LI class="liBullet"> <span class="text">0: The polygon is unlocked and can be edited. </span></LI>
                             <LI class="liBullet"> <span class="text">1: The Polygon is locked and can not be edited. (Default) </span></LI>
-                        
+
                         </UL>
                     </li>
                     <li>&lt;SHAPE&gt; <span class="data">0/1/2</span>&lt;/SHAPE&gt;
@@ -45,13 +45,13 @@
                             <LI class="liBullet"> <span class="text">0: No shape. It's an ordinary polygon. (Default) </span></LI>
                             <LI class="liBullet"> <span class="text">1: Circle.</span></LI>
                             <LI class="liBullet"> <span class="text">2: Rectangle.</span></LI>
-                            
+
                         </UL>
                     </li>
                     <li>&lt;NOSURFACE&gt; <span class="data">0/1</span>&lt;/NOSURFACE&gt;
                         <UL>
                             <LI class="liBullet"> <span class="text">0: Consider the area of the polygon. (Default) </span></LI>
-                            <LI class="liBullet"> <span class="text">1: Do not consider the area or surface, just the perimeter </span></LI>    
+                            <LI class="liBullet"> <span class="text">1: Do not consider the area or surface, just the perimeter </span></LI>
                         </UL>
                     </li>
                     <li>&lt;SHOWPINS&gt; <span class="data">0/1</span>&lt;/SHOWPINS&gt;
@@ -163,6 +163,39 @@
                         <UL>
                             <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label of the area will be displayed.</span></LI>
                         </UL>
+                    </li>
+                    <li>
+                        &lt;GRID&gt;
+                        <UL>
+                            <li>&lt;CELLWIDTH&gt; <span class="data">float</span>&lt;/CELLWIDTH&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The horizontal distance between lines of the grid in meters.</span></LI>
+                                </UL>
+                            </li>
+                            <li>&lt;CELLHEIGHT&gt; <span class="data">float</span>&lt;/CELLHEIGHT&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The vertical distance between lines of the grid in meters.</span></LI>
+                                </UL>
+                            </li>
+                            <li>&lt;BEARING&gt; <span class="data">float</span>&lt;/BEARING&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The bearing of the grid measured in degrees.</span></LI>
+                                </UL>
+                            </li>
+                            <li>&lt;REFLATITUDE&gt; <span class="data">float</span>&lt;/REFLATITUDE&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The latitude in WGS84 system of a reference point in the grid.</span>
+                                    </LI>
+                                </UL>
+                            </li>
+                            <li>&lt;REFLONGITUDE&gt; <span class="data">float</span>&lt;/REFLONGITUDE&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The longitude in WGS84 system of a reference point in the grid.</span>
+                                    </LI>
+                                </UL>
+                            </li>
+                        </UL>
+                        &lt;/GRID&gt;
                     </li>
                     <li>&lt;PICTURES&gt;
                         <UL>
@@ -376,18 +409,18 @@
             <li>...</li>
             <li>&lt;SPOT&gt;</li>
             <li>&lt;/SPOT&gt;</li>
-            
+
         </ul>
-        
+
     </li>
-    
+
     <li>&lt;/POLYGONS&gt;</li>
 </ul>
 
     <hr>
     Please contact me here <a href=mailto:victor@globaldpi.com>victor@globaldpi.com</a> if you have any question or suggestion.
 
-    
+
     <h3><a href="http://measuremapapp.com"> Measure Map</a></h3>
 </body>
 </html>
