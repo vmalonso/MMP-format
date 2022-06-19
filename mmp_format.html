@@ -449,6 +449,151 @@
             <li>...</li>
             <li>&lt;SPOT&gt;</li>
             <li>&lt;/SPOT&gt;</li>
+            <li>&lt;SPOT&gt;
+                <UL>
+                    <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
+                    <li>&lt;SHOWNAME&gt; <span class="data">0/1</span>&lt;/SHOWNAME&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> 0: Do not display the name of the spot on the map. (Default) </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Display the name of the spot on the map.  </span></LI>
+                        </UL>
+                    </li>
+	                <li>&lt;ICON&gt; <span class="data">integer</span>&lt;/ICON&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The index of the available icons. We start with 0.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;LAT&gt; <span class="data">float</span>&lt;/LAT&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The Latitude coordinate of the spot in WGS84 system.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;LONG&gt; <span class="data">float</span>&lt;/LONG&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> The Longitude coordinate of the spot in WGS84 system.</span></LI>
+                         </UL>
+                    </li>
+                    <li>&lt;ALT&gt; <span class="data">float</span>&lt;/ALT&gt;
+                         <UL>
+                             <LI class="liBullet"><span class="text"> Altitude of the point over the sea level in meters</span>.</LI>
+                         </UL>
+                    </li>
+                    <li>&lt;DESCSPOT&gt;
+                         <UL>
+                             <li>&lt;SHOWDESC&gt; <span class="data">0/1</span>&lt;/SHOWDESC&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the map. (Default) </span></LI>
+                                      <LI class="liBullet"><span class="text"> 1: Display the description of the point on the map.  </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;SHOWDESCINREPORT&gt; <span class="data">0/1</span>&lt;/SHOWDESCINREPORT&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> 0: Do not display the description of the point on the report. (Default) </span></LI>
+                                      <LI class="liBullet"><span class="text"> 1: Display the description of the point on the report.  </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;DESC&gt; <span class="data">XXXXXXXXXXXXXXX</span>&lt;/DESC&gt;
+                                 <UL>
+                                      <LI class="liBullet"><span class="text"> The text description of the spot. </span></LI>
+                                 </UL>
+                             </li>
+                             <li>&lt;DESCLAT&gt; <span class="data">float</span>&lt;/DESCLAT&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                </UL>
+                             </li>
+                             <li>&lt;DESCLONG&gt; <span class="data">float</span>&lt;/DESCLONG&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> The Longitude coordinate in WGS84 system where the label with the description of the point will be displayed.</span></LI>
+                                </UL>
+                             </li>
+                        </UL>
+                     </li>
+                     <li>&lt;/DESCSPOT&gt;</li>
+                     <li>&lt;COORDINATESPOTLABELLONGITUDE&gt; <span class="data">float</span>&lt;/COORDINATESPOTLABELLONGITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">The Longitude coordinate in WGS84 system where the label with the name of the spot will be displayed.</span></LI>
+                        </UL>
+                     </li>
+                     <li>&lt;COORDINATESPOTLABELLATITUDE&gt; <span class="data">float</span>&lt;/COORDINATESPOTLABELLATITUDE&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate in WGS84 system where the label with the name of the spot will be displayed.</span></LI>
+                        </UL>
+                     </li>
+                     <li>&lt;PICTURES&gt;
+                        <UL>
+                            <li>&lt;PICTURE&gt;
+                                <UL>
+                                    <li>&lt;DATE&gt; <span class="data"> Date ISO 8601 </span>&lt;/DATE&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The date of the picture in ISO 8601 format. Example:
+                                                    2020-04-17T21:37:00Z
+                                            </LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;PICTUREURL&gt; <span class="data">URL</span>&lt;/PICTUREURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                    <li>&lt;PICTURETHUMBNAILURL&gt; <span class="data">URL</span>&lt;/PICTURETHUMBNAILURL&gt;
+                                        <UL>
+                                            <LI class="liBullet"><span class="text"> The URL of the picture thumbnail. Example: https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span></LI>
+                                        </UL>
+                                    </li>
+                                </UL>
+                            </li>
+                            <li>&lt;/PICTURE&gt;</li>
+                            <li>...</li>
+                            <li>&lt;PICTURE&gt;</li>
+                            <li>&lt;/PICTURE&gt;</li>
+                        </UL>
+                    </li>
+                    <li>&lt;/PICTURES&gt;</li>
+                  </UL>
+            </li>
+            <li>&lt;/SPOT&gt;</li>
+            <li>&lt;IMAGELAYER&gt;
+                <UL>
+                    <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
+                    <li>&lt;IMAGEURL&gt; <span class="data">URL</span>&lt;/IMAGEURL&gt;
+                    <UL>
+                        <LI class="liBullet"><span class="text"> The URL of the picture (optional). Example:
+                                https://firebasestorage.googleapis.com/v0/b/api-project-196280979389.appspot.com/o/images%2FaKhqYHb4k1T93O2baQOGUUqNMRx2%2F20180428-11_13--LBAWiPhNnGLknNTCfZy.png?alt=media&amp;amp;token=30f7791c-19fb-4d09-be83-457ec731940e</span>
+                        </LI>
+                    </UL>
+                    </li>
+                    <li>&lt;LAT1&gt; <span class="data">float</span>&lt;/LAT&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate of the corner number 1 of the rectangle containing the image layer in WGS84 system.</span>
+                            </LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LONG1&gt; <span class="data">float</span>&lt;/LONG&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Longitude coordinate of the corner number 2 of the rectangle containing the image layer in WGS84 system.</span>
+                            </LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LAT2&gt; <span class="data">float</span>&lt;/LAT&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Latitude coordinate of the corner number 2 of the rectangle containing the image layer in WGS84 system.</span>
+                            </LI>
+                        </UL>
+                    </li>
+                    <li>&lt;LONG2&gt; <span class="data">float</span>&lt;/LONG&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> The Longitude coordinate of the corner number 2 of the rectangle containing the image layer in WGS84 system.</span>
+                            </LI>
+                        </UL>
+                    </li>
+
+                </UL>
+            </li>
+            <li>&lt;/IMAGELAYER&gt;</li>
+            <li>...</li>
+            <li>&lt;IMAGELAYER&gt;</li>
+            <li>&lt;/IMAGELAYER&gt;</li>
 
         </ul>
 
