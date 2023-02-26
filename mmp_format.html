@@ -81,7 +81,7 @@
                     </li>
                     <li>&lt;LINECUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/LINECUSTOMCOLOR&gt;
                         <UL>
-                            <LI class="liBullet"><span class="text"> Hexadecima value for the color of the line, where </span></LI>
+                            <LI class="liBullet"><span class="text"> Hexadecimal value for the color of the line, where </span></LI>
                             <LI class="liBullet"><span class="text"> XX: hex red value  </span></LI>
                             <LI class="liBullet"><span class="text"> YY: hex green value  </span></LI>
                             <LI class="liBullet"><span class="text"> ZZ: hex blue value  </span></LI>
@@ -106,7 +106,7 @@
                     </li>
                     <li>&lt;AREACUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/AREACUSTOMCOLOR&gt;
                         <UL>
-                            <LI class="liBullet"><span class="text"> Hexadecima value for the color, where </span></LI>
+                            <LI class="liBullet"><span class="text"> Hexadecimal value for the color, where </span></LI>
                             <LI class="liBullet"><span class="text"> XX: hex red value  </span></LI>
                             <LI class="liBullet"><span class="text"> YY: hex green value  </span></LI>
                             <LI class="liBullet"><span class="text"> ZZ: hex blue value  </span></LI>
@@ -379,6 +379,28 @@
                          <UL>
                              <LI class="liBullet"><span class="text"> The index of the available icons. We start with 0.</span></LI>
                          </UL>
+                    </li>
+                    <li>&lt;SPOTCOLOR&gt; <span class="data">0/1/2/3/4/5/6/7</span>&lt;/SPOTCOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"> <span class="text">Basic color of the line. For a wider range of colors, use value 6 and
+                                    use LINECUSTOMCOLOR element </span></LI>
+                            <LI class="liBullet"><span class="text"> 0: Red </span></LI>
+                            <LI class="liBullet"><span class="text"> 1: Blue </span></LI>
+                            <LI class="liBullet"><span class="text"> 2: Green </span></LI>
+                            <LI class="liBullet"><span class="text"> 3: Yellow </span></LI>
+                            <LI class="liBullet"><span class="text"> 4: White </span></LI>
+                            <LI class="liBullet"><span class="text"> 5: Black </span></LI>
+                            <LI class="liBullet"><span class="text"> 6: Custom Color. See next element </span></LI>
+                            <LI class="liBullet"><span class="text"> 7: Original Colors. Do not colorize </span></LI>
+                        </UL>
+                    </li>
+                    <li>&lt;SPOTCUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/SPOTCUSTOMCOLOR&gt;
+                        <UL>
+                            <LI class="liBullet"><span class="text"> Hexadecimal value for the color of the icon, where </span></LI>
+                            <LI class="liBullet"><span class="text"> XX: hex red value </span></LI>
+                            <LI class="liBullet"><span class="text"> YY: hex green value </span></LI>
+                            <LI class="liBullet"><span class="text"> ZZ: hex blue value </span></LI>
+                        </UL>
                     </li>
                     <li>&lt;LAT&gt; <span class="data">float</span>&lt;/LAT&gt;
                          <UL>
