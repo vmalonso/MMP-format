@@ -23,39 +23,44 @@
 	</li>
 	<li class="liOpen">&lt;POLYGONS&gt;
 		<ul>
-            <li>&lt;GROUP&gt;
-                <UL>
-                    <li class="liBullet">&lt;ID&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/ID&gt;</li>
-                    <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
-                    <li class="liBullet">&lt;DESCRIPTION&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/DESCRIPTION&gt;</li>
-                    <li>&lt;GROUPCOLOR&gt; <span class="data">0/1/2/3/4/5/6/7</span>&lt;/GROUPCOLOR&gt;
+            <li class="liOpen">&lt;GROUPS&gt;
+                <ul>
+                    <li>&lt;GROUP&gt;
                         <UL>
-                            <LI class="liBullet"> <span class="text">Basic color of the group. For a wider range of colors, use value 6 and
-                                    use GROUPCUSTOMCOLOR element </span></LI>
-                            <LI class="liBullet"><span class="text"> 0: Red </span></LI>
-                            <LI class="liBullet"><span class="text"> 1: Blue </span></LI>
-                            <LI class="liBullet"><span class="text"> 2: Green </span></LI>
-                            <LI class="liBullet"><span class="text"> 3: Yellow </span></LI>
-                            <LI class="liBullet"><span class="text"> 4: White </span></LI>
-                            <LI class="liBullet"><span class="text"> 5: Black </span></LI>
-                            <LI class="liBullet"><span class="text"> 6: Custom Color. See next element </span></LI>
-                            <LI class="liBullet"><span class="text"> 7: Original Colors. Do not colorize </span></LI>
+                            <li class="liBullet">&lt;ID&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/ID&gt;</li>
+                            <li class="liBullet">&lt;NAME&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/NAME&gt;</li>
+                            <li class="liBullet">&lt;DESCRIPTION&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/DESCRIPTION&gt;</li>
+                            <li>&lt;GROUPCOLOR&gt; <span class="data">0/1/2/3/4/5/6/7</span>&lt;/GROUPCOLOR&gt;
+                                <UL>
+                                    <LI class="liBullet"> <span class="text">Basic color of the group. For a wider range of colors, use value 6 and
+                                            use GROUPCUSTOMCOLOR element </span></LI>
+                                    <LI class="liBullet"><span class="text"> 0: Red </span></LI>
+                                    <LI class="liBullet"><span class="text"> 1: Blue </span></LI>
+                                    <LI class="liBullet"><span class="text"> 2: Green </span></LI>
+                                    <LI class="liBullet"><span class="text"> 3: Yellow </span></LI>
+                                    <LI class="liBullet"><span class="text"> 4: White </span></LI>
+                                    <LI class="liBullet"><span class="text"> 5: Black </span></LI>
+                                    <LI class="liBullet"><span class="text"> 6: Custom Color. See next element </span></LI>
+                                    <LI class="liBullet"><span class="text"> 7: Original Colors. Do not colorize </span></LI>
+                                </UL>
+                            </li>
+                            <li>&lt;GROUPCUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/GROUPCUSTOMCOLOR&gt;
+                                <UL>
+                                    <LI class="liBullet"><span class="text"> Hexadecimal value for the color of the icon, where </span></LI>
+                                    <LI class="liBullet"><span class="text"> XX: hex red value </span></LI>
+                                    <LI class="liBullet"><span class="text"> YY: hex green value </span></LI>
+                                    <LI class="liBullet"><span class="text"> ZZ: hex blue value </span></LI>
+                                </UL>
+                            </li>                    
                         </UL>
                     </li>
-                    <li>&lt;GROUPCUSTOMCOLOR&gt; <span class="data">XXYYZZ</span>&lt;/GROUPCUSTOMCOLOR&gt;
-                        <UL>
-                            <LI class="liBullet"><span class="text"> Hexadecimal value for the color of the icon, where </span></LI>
-                            <LI class="liBullet"><span class="text"> XX: hex red value </span></LI>
-                            <LI class="liBullet"><span class="text"> YY: hex green value </span></LI>
-                            <LI class="liBullet"><span class="text"> ZZ: hex blue value </span></LI>
-                        </UL>
-                    </li>                    
-                  </UL>
+                    <li>&lt;/GROUP&gt;</li>
+                    <li>...</li>
+                    <li>&lt;GROUP&gt;</li>
+                    <li>&lt;/GROUP&gt;</li>
+                </ul>
             </li>
-            <li>&lt;/GROUP&gt;</li>
-            <li>...</li>
-            <li>&lt;GROUP&gt;</li>
-            <li>&lt;/GROUP&gt;</li>
+            <li>&lt;/GROUPS&gt;</li>
             <li class="liOpen">&lt;POLYGON&gt;
                 <ul>
                     <li class="liBullet">&lt;GROUPID&gt; <span class="data">XXXXXXXXXXXXXXX </span>&lt;/GROUPID&gt;</li>
